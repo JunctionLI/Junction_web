@@ -73,12 +73,12 @@ header{
 .nav_list{
     display:flex;
     justify-content: right;
-    font-size: 1rem;
+   
 }
 
 .nav_sublist{
     margin:0 20px;
-    font-size:20px;
+    font-size:1.2vw;
     transition: transform 0.3s ease;
 }
 
@@ -107,6 +107,7 @@ header{
     padding: 15px 26px;
     color:var(--text2-color);
     font-weight: 600;
+    font-size:1.2rem;
 }
 
 .back_to_top:hover{
@@ -144,7 +145,7 @@ header{
 
 
 #introduction1{
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     color: var(--text2-color);
     font-weight: bolder;
     text-align: center;
@@ -168,7 +169,7 @@ span{
 }
 
 #introduction2{
-    font-size: 2rem;
+    font-size: 1.5vw;
     color: var(--text2-color);
     font-weight: bolder;
     margin:25px;
@@ -551,3 +552,97 @@ footer{
     transition: transform 0.4s ease-out, opacity 0.4s ease-out; 
     pointer-events: none;
   }
+
+
+
+ /*responsive web design*/
+ 
+ @media (max-width: 1100px) {
+    .home{
+        width: 100%;
+        background:url(../img/person2.jpg);
+        background-size:contain;
+        background-position: center;
+        background-repeat: repeat;
+        display: flex;
+	    align-items:flex-end;
+        justify-content: flex-end;
+}
+    
+
+    .nav_sublist{
+        font-size:1.8vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #junction_logo{
+        display: flex;
+        align-items: center;
+        height:auto;
+        width:20%;
+        margin-right:10vw;
+    }
+
+    #introduction1{
+        font-size:2.5vw;
+    }
+
+    #introduction2{
+        font-size: 2.5vw;
+    }
+
+    span{
+        font-size: 5vw;
+    }
+
+    .about_me_sub{
+        background-color: var(--bg3-color);
+        width:18vw;
+        padding:20px;
+        height: 220px;
+        border-radius: 15px;
+        margin:20px;
+        text-align: center;
+        font-size:0.8rem;
+        align-items: center;
+        transition: all .50s ease;
+        overflow:scroll;
+    }
+
+    .about_me_portrait{
+        width: 30vw;
+        border-radius: 10%;
+        left:0;
+    }
+}
+
+@media (max-width: 780px) {
+
+    .nav_sublist{
+        font-size:6rem;
+      
+    }
+
+    #junction_logo{
+        display: flex;
+        align-items: center;
+        height:auto;
+        width:20%;
+        margin-right:10vw;
+    }
+    
+    #introduction1{
+        font-size:3vw;
+    }
+
+    #introduction2{
+        font-size: 30%;
+    }
+
+    span{
+        font-size: 7vw;
+    }
+   
+}
+
