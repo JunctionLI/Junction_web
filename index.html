@@ -99,21 +99,21 @@
                                 <img src="img/tick_icon.png" class="tick" alt="tick">
                                 <p class="language">HTML</p>
                             </div>
-                            <p class="language_level">Intermediate</p>
+                            
                         </div>
                         <div class="languages">
                             <div class="language-container">
                                 <img src="img/tick_icon.png" class="tick" alt="tick">
                                 <p class="language">CSS</p>
                             </div>
-                            <p class="language_level">Intermediate</p>
+                            
                         </div>
                         <div class="languages">
                             <div class="language-container">
                                 <img src="img/tick_icon.png" class="tick" alt="tick">
                                 <p class="language">JavaScript</p>
                             </div>    
-                            <p class="language_level">Basic</p>
+                            
                         </div>
                     </div>
                     
@@ -124,21 +124,21 @@
                                 <img src="img/tick_icon.png" class="tick" alt="tick">
                                 <p class="language">Python</p>
                             </div>    
-                            <p class="language_level">Basic</p>
+                            
                         </div>
                         <div class="languages">
                             <div class="language-container">
                                 <img src="img/tick_icon.png" class="tick" alt="tick">
                                 <p class="language">C#</p>
                             </div>    
-                            <p class="language_level">Basic</p>
+                            
                         </div>
                         <div class="languages">
                             <div class="language-container">
                                 <img src="img/tick_icon.png" class="tick" alt="tick">
                                 <p class="language">Git</p>
                             </div>    
-                            <p class="language_level">Basic</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -217,10 +217,10 @@
                
                 <div class="contact-form" data-aos="fade-up">
                     <form id="contactForm">
-                        <input type="text" id="name" placeholder="Your Name" required>
-                        <input type="email" id="email" placeholder="E-mail" required>
-                        <input type="text" id="subject" placeholder="Write a Subject" required>
-                        <textarea id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        <input type="email" name="email" id="email" placeholder="E-mail" required>
+                        <input type="text" name="subject" id="subject" placeholder="Write a Subject" required>
+                        <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                         <input type="submit" value="Send a message" class="contact-btn">
                     </form>
                 </div>    
@@ -231,15 +231,28 @@
        <footer>
         <p>Copyright ©2023 Junction LI. All Rights Reserved</p>
        </footer>
-       <script src="script/script.js"></script>  
+       
        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-       <script src="script/sendEmail.js"></script>
+       
        <script>
         AOS.init({
             offset: 500,
             duration: 1200,
         });
       </script>
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init("31W2iXee8Lci24ojO");
+        })();
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script/script.js"></script>  
+        <script src="script/sendEmail.js"></script>
+
+
     </body>
     
 </html>

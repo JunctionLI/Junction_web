@@ -1,46 +1,36 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
 
-const app = express();
+// emailjs.sendForm('service_492v6mn', 'template_s7crucg', '#contactForm')
+//     .then(function(response) {
+//        console.log('SUCCESS!', response.status, response.text);
+//     }, function(error) {
+//        console.log('FAILED...', error);
+//     });
+ 
 
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// 处理 POST 请求
-app.post('/send-email', (req, res) => {
-  const { name, email, subject, message } = req.body;
-
-  // 创建邮件传输对象
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'ivyiknow@gmail.com', // 发送邮件的邮箱地址
-      pass: 'Ivy!2345' // 发送邮件的邮箱密码或授权码
-    }
-  });
-
-  // 设置邮件内容
-  const mailOptions = {
-    from: email,
-    to: 'lijunxianjunction@gmail.com', // 接收邮件的邮箱地址
-    subject: subject,
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-  };
-
-  // 发送邮件
-  transporter.sendMail(mailOptions, function(error, info) {
-    if (error) {
-      console.log(error);
-      res.status(500).send('Error'); // 发送邮件失败时返回错误信息
-    } else {
-      console.log('Email sent: ' + info.response);
-      res.send('Success'); // 发送邮件成功时返回成功信息
-    }
-  });
+$('#contactForm').on('submit', function(event) {
+      event.preventDefault(); // prevent reload
+      
+      var formData = new FormData(this);
+      formData.append('service_id', 'service_492v6mn');
+      formData.append('template_id', 'template_s7crucg');
+      formData.append('user_id', '31W2iXee8Lci24ojO');
+   
+      $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+          type: 'POST',
+          data: formData,
+          contentType: false, // auto-detection
+          processData: false // no need to parse formData to string
+      }).done(function() {
+          alert('Your mail is sent!');
+          $('#contactForm').trigger('reset');
+      }).fail(function(error) {
+          alert('Oops... ' + JSON.stringify(error));
+      });
 });
 
-// 启动服务器
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
+var url = 'https://api.emailjs.com/api/v1.1/history?user_id=31W2iXee8Lci24ojO&accessToken=gzq2xL2zvCBwAciDPgf-k&page=1&count=50';
 
+fetch(url)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));

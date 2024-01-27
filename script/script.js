@@ -18,28 +18,3 @@ document.addEventListener('mousemove', function(e) {
   });
   
 
-
-  //situmlate Email sending
-  const contactForm = document.getElementById('contactForm');
-
-  contactForm.addEventListener('submit', function(event) {
-	  event.preventDefault();
-
-	  // 模拟发送电子邮件
-	  simulateEmailSending();
-  });
-
-  function simulateEmailSending() {
-	  // 这里模拟发送邮件的过程，实际上这是一个假的演示
-	  setTimeout(function() {
-		  // 模拟成功发送邮件，弹出提示窗口
-		  showSuccessMessage();
-	  }, 1000); // 假设发送电子邮件需要 2 秒钟
-  }
-
-  function showSuccessMessage() {
-	  // 弹出提示窗口
-	  alert('Email has been sent successfully!');
-  }
-
-
