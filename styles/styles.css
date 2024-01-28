@@ -349,9 +349,10 @@ span{
 }
 
 .experience-subtitle{
-    font-size:25px;
+    font-size:2rem;
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .languages{
@@ -379,14 +380,14 @@ span{
 #frontend{
     border: 1px var(--hover-color) solid;
     border-radius: 5%;
-    width:40vh;
+
     margin:50px;
 }
 
 #backend{
     border: 1px var(--hover-color) solid;
     border-radius: 5%;
-    width:40vh;
+
 }
 
 .language-show{
@@ -445,6 +446,7 @@ span{
     padding:30px;
     border-radius: 5%;
     transition: all .50s ease;
+    width:auto;
 }
 
 
@@ -553,6 +555,7 @@ footer{
     background-color:var(--text2-color);
     padding-bottom: 10px;
     font-weight: 400;
+    font-size: var(--p-font);
 }
 
 .trail {
@@ -633,6 +636,10 @@ footer{
         margin-right:10%;
         margin-left:5%;
     }
+
+    #project1,#project2,#project3{
+        width:30vw;
+    }
     
 
 }
@@ -674,9 +681,23 @@ footer{
 		left: 0;
 	}
 
-    .about_me_sub{
-        width:40vw;
+    .about_me_portrait{
+        width: 50vw;
     }
+    
+    #about_me_detail{
+        margin-left:-20px;
+    }
+    
+    .about_me_sub{
+        width:50vw;
+        margin-right:8px;
+    }
+ 
+    #about_me_detail3{
+        width:80vw;
+    }
+
 }
 
 
@@ -688,7 +709,6 @@ footer{
 	:root{
 		--h1-font: 3.5rem;
 		--h2-font: 2.7rem;
-
 	}
 
     button{
@@ -705,12 +725,28 @@ footer{
     }
     
     .about_me_sub{
-        width:40vw;
+        width:50vw;
+        margin-right:8px;
     }
  
     #about_me_detail3{
         width:80vw;
     }
+
+    #frontend{
+        width:70vw;
+    }
+
+    #backend{
+        width:70vw;
+    }
+
+    #project1,#project2,#project3{
+        width: 40vw;
+    }
+
+  
+
 
 
 }
@@ -720,11 +756,69 @@ footer{
 		--h1-font: 3rem;
 		--h2-font: 2.7rem;
 	}
+
+    #junction_logo{
+        width:20vw;
+    }
+
+    .about_me_portrait{
+        width: 50vw;
+    }
+    
+    #about_me_detail{
+        margin-left:-20px;
+    }
+    
+    .about_me_sub{
+        width:50vw;
+       margin-left:45px;
+    }
+ 
+    #about_me_detail3{
+        width:80vw;
+    }
+
+    #project1,#project2,#project3{
+        width: 80vw;
+    }
+
+    #home-text{
+        margin-top:200px;
+    }
+
+    .contact-form form input,
+form textarea{
+    font-size:1rem;
+    width:70vw;
 }
+
+}
+
+
 
 @media (max-width: 380px){
 	:root{
 		--h1-font: 2rem;
 		--h2-font: 1.7rem;
 	}
+
+    
+.experience-subtitle{
+    font-size: 1.5rem;
+}
+
+.about_me_sub{
+    width:50vw;
+}
+
+#menu-icon{
+    margin-left:-20px;
+} 
+ 
+}
+
+@media (max-width:320px){
+    #menu-icon{
+        margin-left:-40px;
+    } 
 }
