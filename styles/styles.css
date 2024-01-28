@@ -8,6 +8,9 @@
     --bg2-color:#30012f;
     --bg3-color:#610077;
 	--second-bg-color: #081b29;
+    --h1-font: 5.5rem;
+	--h2-font: 3.6rem;
+	--p-font: 1rem;
 }
 
 *{
@@ -37,6 +40,7 @@ body{
     transform: rotate(90deg);
     width:5vw;
 }
+
 
 
 /*below this is header part*/
@@ -78,7 +82,7 @@ header{
 
 .nav_sublist{
     margin:0 20px;
-    font-size:1.2vw;
+    font-size:var(--p-font);
     transition: transform 0.3s ease;
 }
 
@@ -122,6 +126,10 @@ header{
 	display: none;
 }
 
+header.sticky{
+	background: var(--bg2-color);
+	padding: 15px 13%;
+}
 
 /*below this is home part*/
 
@@ -145,15 +153,21 @@ header{
 
 
 #introduction1{
-    font-size: 1.5vw;
+    font-size:  22px;
     color: var(--text2-color);
     font-weight: bolder;
     text-align: center;
 }
 
+#home-text{
+    position:relative;
+    height:auto;
+    justify-content: center;
+    align-items: center;
+}
 
 span{
-    font-size:6rem;
+    font-size:var(--h1-font);
     color:var(--hover-color);
     text-shadow:5px 5px 5px var(--text-color);
     font-weight: 600;
@@ -169,7 +183,7 @@ span{
 }
 
 #introduction2{
-    font-size: 1.5vw;
+    font-size: 22px;
     color: var(--text2-color);
     font-weight: bolder;
     margin:25px;
@@ -235,7 +249,7 @@ span{
     width: 100%; 
     max-width: 100%; 
     box-sizing: border-box;
-    word-wrap: break-word; 
+    word-wrap:normal; 
 }
 
 #about_me_detail{
@@ -260,8 +274,9 @@ span{
     font-size:0.8rem;
     align-items: center;
     transition: all .50s ease;
-    overflow:hidden;
+    overflow: scroll;;
 }
+
 
 .about_me_sub:hover{
     border:2px solid var(--text-color);
@@ -403,6 +418,8 @@ span{
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    width:80vw;
+    margin:auto;
 }
 
 .project_type{
@@ -538,11 +555,6 @@ footer{
     font-weight: 400;
 }
 
-
-
-/*below this is media*/
-
-  
 .trail {
     position: absolute;
     width: 17.5px; 
@@ -554,95 +566,165 @@ footer{
   }
 
 
+/*below this is media*/
+   
 
- /*responsive web design*/
- 
- @media (max-width: 1100px) {
-    .home{
+@media (max-width: 1650px){
+      
+        header.sticky{
+            padding: 14px 7%;
+        }
+     
+}
+
+@media(max-width:1455px){
+    .project-container{
+        width:30px;
+    }
+}
+
+@media (max-width: 1330px){
+	header{
+		padding: 18px 5%;
+	}
+	header.sticky{
+		padding: 14px 5%;
+	}
+	
+	:root{
+		--h1-font: 4.7rem;
+	    --h2-font: 3.5rem;
+	    --p-font: 15px;    
+	}
+	
+}
+
+
+@media (max-width: 1170px){
+	.home{
+		height: 90vh;
         width: 100%;
         background:url(../img/person2.jpg);
         background-size:contain;
         background-position: center;
         background-repeat: repeat;
         display: flex;
-	    align-items:flex-end;
-        justify-content: flex-end;
-}
-    
+        align-items:center;
+        justify-content: flex-start;
+	}
+
+    #home-text{
+        padding-top:300px;
+    }
+
+	:root{
+		--h1-font: 4rem; 
+	}
 
     .nav_sublist{
-        font-size:1.8vw;
-        display: flex;
-        flex-wrap: wrap;
+        font-size:1rem;
     }
 
     #junction_logo{
         display: flex;
         align-items: center;
         height:auto;
-        width:20%;
-        margin-right:10vw;
+        width:15%;
+        margin-right:10%;
+        margin-left:5%;
     }
+    
 
-    #introduction1{
-        font-size:2.5vw;
-    }
+}
 
-    #introduction2{
-        font-size: 2.5vw;
-    }
 
-    span{
-        font-size: 5vw;
-    }
+@media (max-width: 950px){
+	:root{
+		--h1-font: 4rem;
+		--h2-font: 3rem;
+	}
+
+    #menu-icon{
+		display: block;
+	}
+	
+	.nav_list{
+		position: absolute;
+		min-height: 100vh;
+		width: 100%;
+		padding: 70px 60px;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 100%;
+		display: flex;
+		flex-direction: column;
+		background: var(--bg2-color);
+		transition: all 0.6s ease-in-out;
+	}
+
+	.nav_list a{
+		display: block;
+		padding: 0;
+		margin: 0px 0px 25px 0px;
+		font-size: 2.1rem;
+		font-weight: 500;
+	}
+	.nav_list.open{
+		left: 0;
+	}
 
     .about_me_sub{
-        background-color: var(--bg3-color);
-        width:18vw;
-        padding:20px;
-        height: 220px;
-        border-radius: 15px;
-        margin:20px;
-        text-align: center;
-        font-size:0.8rem;
-        align-items: center;
-        transition: all .50s ease;
-        overflow:scroll;
+        width:40vw;
     }
+}
+
+
+@media (max-width:770px){
+    .about_me_portrait{
+        width: 50vw;
+    }
+
+	:root{
+		--h1-font: 3.5rem;
+		--h2-font: 2.7rem;
+
+	}
+
+    button{
+		padding: 15px 28px;
+		font-size: 15px;
+	}
 
     .about_me_portrait{
-        width: 30vw;
-        border-radius: 10%;
-        left:0;
-    }
-}
-
-@media (max-width: 780px) {
-
-    .nav_sublist{
-        font-size:6rem;
-      
-    }
-
-    #junction_logo{
-        display: flex;
-        align-items: center;
-        height:auto;
-        width:20%;
-        margin-right:10vw;
+        width: 50vw;
     }
     
-    #introduction1{
-        font-size:3vw;
+    #about_me_detail{
+        margin-left:-20px;
+    }
+    
+    .about_me_sub{
+        width:40vw;
+    }
+ 
+    #about_me_detail3{
+        width:80vw;
     }
 
-    #introduction2{
-        font-size: 30%;
-    }
 
-    span{
-        font-size: 7vw;
-    }
-   
 }
 
+@media (max-width: 580px){
+	:root{
+		--h1-font: 3rem;
+		--h2-font: 2.7rem;
+	}
+}
+
+@media (max-width: 380px){
+	:root{
+		--h1-font: 2rem;
+		--h2-font: 1.7rem;
+	}
+}
