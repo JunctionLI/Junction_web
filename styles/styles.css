@@ -726,7 +726,7 @@ footer{
     
     .about_me_sub{
         width:50vw;
-        margin-right:8px;
+        margin-right:px;
     }
  
     #about_me_detail3{
@@ -771,7 +771,6 @@ footer{
     
     .about_me_sub{
         width:50vw;
-       margin-left:45px;
     }
  
     #about_me_detail3{
