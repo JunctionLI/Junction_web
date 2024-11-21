@@ -263,27 +263,49 @@ span{
    flex-wrap: wrap;
 }
 
-.about_me_sub{
+.about_me_sub {
     background-color: var(--bg3-color);
-    width:18vw;
-    padding:20px;
-    height: 220px;
+    width: 300px; /* 统一宽度 */
+    height: 250px; /* 统一高度 */
+    padding: 20px;
     border-radius: 15px;
-    margin:20px;
+    margin: 20px;
     text-align: center;
-    font-size:0.8rem;
-    align-items: center;
-    transition: all .50s ease;
-    overflow: scroll;
+    font-size: 0.9rem;
+    display: flex; /* 添加flexbox布局 */
+    flex-direction: column; /* 子元素纵向排列 */
+    align-items: center; /* 子元素水平居中 */
+    justify-content: center; /* 子元素垂直居中 */
+    transition: all 0.5s ease;
+    overflow: hidden; /* 防止溢出 */
 }
 
-
-.about_me_sub:hover{
-    border:2px solid var(--text-color);
-    transition: all .50s ease;
-    transform: scale(1.08);
-
+.about_me_sub:hover {
+    border: 2px solid var(--text-color);
+    transform: scale(1.1);
+    transition: all 0.5s ease;
 }
+
+.about_me_sub img {
+    margin-bottom: 10px; /* 图标和文字之间的间距 */
+    width: 50px; /* 图标宽度 */
+    height: 50px; /* 图标高度 */
+    object-fit: contain; /* 确保图标比例不变 */
+}
+
+.about_me_subtitle {
+    font-size: 18px; /* 调整字体大小 */
+    font-weight: 700; /* 增强标题权重 */
+    margin: 5px 0; /* 上下间距 */
+}
+
+.about_me_content {
+    font-size: 14px; /* 调整内容字体大小 */
+    color: var(--text2-color); /* 调整字体颜色 */
+    margin-bottom: 8px;
+    text-align: center;
+}
+
 
 #about_me_portrait{
     display: flex;
