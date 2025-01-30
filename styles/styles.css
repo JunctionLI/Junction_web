@@ -97,6 +97,10 @@ header{
     font-weight: 600;
 }
 
+header:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    
+}
 
 .right-nav{
     display: flex;
@@ -267,7 +271,7 @@ span{
 .about_me_sub {
     background-color: var(--bg3-color);
     width: 300px; /* 统一宽度 */
-    height: 250px; /* 统一高度 */
+    height: 300px; /* 统一高度 */
     padding: 20px;
     border-radius: 15px;
     margin: 20px;
@@ -278,7 +282,7 @@ span{
     align-items: center; /* 子元素水平居中 */
     justify-content: center; /* 子元素垂直居中 */
     transition: all 0.5s ease;
-    overflow: hidden; /* 防止溢出 */
+    overflow: scroll; /* 防止溢出 */
 }
 
 .about_me_sub:hover {
@@ -418,6 +422,8 @@ span{
     transition: all .5s ease;
     height:500px;
     width:300px;
+    justify-content: center;
+    text-align: center;
 }
 
 .language-show:hover{
@@ -738,10 +744,16 @@ footer{
     .about_me_sub{
         width:50vw;
         margin-right:8px;
+        height:50vh;
     }
  
     #about_me_detail3{
         width:80vw;
+    }
+
+    .language-show{
+        text-align: center;
+        justify-content: center;
     }
 
 }
